@@ -1,0 +1,104 @@
+/* Estilos para o Sistema de Identificação e Controle */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.nav-tabs .nav-link {
+    font-weight: 500;
+}
+.nav-tabs .nav-link.active {
+    font-weight: 600;
+}
+.form-label {
+    font-weight: 500;
+}
+.form-text {
+    font-size: 0.85rem;
+}
+.result-card {
+    background-color: #f8f9fa;
+    border-left: 4px solid #0d6efd;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.param-value {
+    font-weight: 600;
+    color: #0d6efd;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+}
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+.alert {
+    margin-top: 20px;
+}
+/* Botões de navegação */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+/* Cabeçalho */
+.navbar-brand {
+    font-weight: 600;
+}
+/* Abas */
+.nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+}
+.nav-tabs .nav-link {
+    margin-bottom: -2px;
+    border: none;
+    border-bottom: 2px solid transparent;
+}
+.nav-tabs .nav-link.active {
+    border-color: #0d6efd;
+    color: #0d6efd;
+}
+/* Cards */
+.card-header {
+    background-color: #f1f5f9;
+    font-weight: 600;
+}
+/* Formulários */
+.form-range::-webkit-slider-thumb {
+    background: #0d6efd;
+}
+.form-range::-moz-range-thumb {
+    background: #0d6efd;
+}
+.form-range::-ms-thumb {
+    background: #0d6efd;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-buttons button {
+        width: 100%;
+    }
+}
