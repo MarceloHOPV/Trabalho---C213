@@ -36,6 +36,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const gotoSimulateBtn = document.getElementById('goto-simulate-btn');
     const backToTuneBtn = document.getElementById('back-to-tune-btn');
     
+    // Função para abrir a imagem do ngrok e pedir a permissão
+    function promptNgrokPermission(imageUrl, elementId) {
+        const confirmOpen = confirm("⚠️ Para exibir o gráfico corretamente, precisamos abrir o link da imagem uma vez para autorizar o acesso no navegador.\nClique OK para abrir a imagem e aceitar a permissão (só precisa fazer isso uma vez por sessão).");
+
+        if (confirmOpen) {
+            window.open(imageUrl, "_blank");
+        }
+
+        // Mesmo que ele cancele, ainda tenta carregar a imagem no <img> (caso já tenha autorizado antes)
+        document.getElementById(elementId).src = imageUrl;
+    }
+
+
     // Configurar navegação entre abas
     gotoIdentifyBtn.addEventListener('click', () => {
         const tab = new bootstrap.Tab(identifyTab);
@@ -146,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
             displayDataSummary(data.data_summary);
             
             // Exibir gráfico
-            document.getElementById('raw-plot').src = API_CONFIG.getImageUrl(data.plot_path);
+            promptNgrokPermission(API_CONFIG.getImageUrl(data.plot_path), 'raw-plot');
             document.getElementById('data-summary-card').style.display = 'block';
             
             showAlert('Arquivo processado com sucesso!', 'success');
