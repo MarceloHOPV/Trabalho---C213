@@ -406,7 +406,7 @@ async def plotar_resposta(
         td_itae = tau * E * (theta_tau ** F)
         
         # Sistema planta com atraso (aproximação de Padé)
-        num_pade, den_pade = pade(theta, 1)
+        num_pade, den_pade = pade(theta, 20)
         planta = series(tf(k, [tau, 1]), tf(num_pade, den_pade))
         
         # PID - IMC
