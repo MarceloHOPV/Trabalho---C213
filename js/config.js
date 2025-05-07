@@ -21,3 +21,4 @@ const API_CONFIG = {
         return `${this.baseUrl}/${path}`;
     }
 };
+ 
