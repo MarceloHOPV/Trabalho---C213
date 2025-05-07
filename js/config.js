@@ -1,7 +1,7 @@
 // Configuração da API
 const API_CONFIG = {
     // URL base da API
-    baseUrl: 'http://3c5a-131-221-241-235.ngrok-free.app',
+    baseUrl: 'https://59bd-2804-18-48aa-5e20-d043-bcd3-7f73-ce0f.ngrok-free.app',
      
     // Endpoints da API
     endpoints: {
