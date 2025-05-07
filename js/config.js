@@ -1,8 +1,8 @@
 // Configuração da API
 const API_CONFIG = {
     // URL base da API
-    baseUrl: 'http://localhost:8000',
-    
+    baseUrl: 'https://6453-131-221-241-235.ngrok-free.app',
+     
     // Endpoints da API
     endpoints: {
         upload: '/upload/',
